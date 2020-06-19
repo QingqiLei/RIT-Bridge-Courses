@@ -135,6 +135,21 @@ For example, let R = { (1, f), (2, g), (1, h), (2, i),
 – The equivalence class [3] = {j, l}
 – The equivalence class [4] = {k, m}
 
+if R is an equivalence relation on a noneempty set S, then the set of equivalence of R is a partition Π of S, because Π is a partition:
+a) no element of Π is empty,
+b) all members of Π are disjoint, and
+c) the union of all the elements of Π equals S
+
+### partial order
+a partial order is a relation that is:
+reflexive
+anti-symmetric
+transitive
+Let R be a partial order defined on a set S.
+Then the pair (S, R) is a partially ordered set
+
+### Total order
+
 
 ## functions
 
