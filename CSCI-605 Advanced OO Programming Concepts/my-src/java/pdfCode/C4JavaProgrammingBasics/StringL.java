@@ -13,16 +13,20 @@ public class StringL {
     public static void main(String args[]) {
         String aString = "abc";
         System.out.print("abc == aString\n ");
-        System.out.println("abc" == aString);
+        System.out.println("abc" == aString);       // true
 
         String newString = new String("abc");
         System.out.print("abc == new String(abc)\n ");
-        System.out.println("abc" == newString);
+        System.out.println("abc" == newString);     // false
 
-        method("1", "abc", "abc");
+        method("1", "abc", "abc");          // true
         method("2", "abc", new String("abc"));  //false
-        method("3", "abc", "ab" + "c");
-        method("4", "abc", "" + "abc");
+        method("3", "abc", "ab" + "c");      // true
+        method("4", "abc", "" + "abc");     // true
+
+        String str1 = "abc";
+        method("5","abc",(str1+""));         // false
+         System.out.println("abc"== (str1+""));        // false
     }
 }
 /*
