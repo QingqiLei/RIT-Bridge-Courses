@@ -29,5 +29,6 @@ public class StringSummary {
 
     public static void method(String id, String literal, String aNewString){
         System.out.println(id +"   "+(literal == aNewString));
+
     }
 }
