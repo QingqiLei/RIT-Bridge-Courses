@@ -1,5 +1,7 @@
 package pdfCode.C6ClassRelationships;
 
+import java.util.regex.Pattern;
+
 public class ComplexExample {
     static class Student	{
 	int uid;
@@ -39,6 +41,7 @@ public class ComplexExample {
     // 改变内容
     public static void method3(Student joe )	{
 	joe.setUid(2);
+
     }
     public static void method4(String you )	{
 	System.out.println("	4.a:  " + you );
@@ -57,9 +60,9 @@ public class ComplexExample {
     }
 }
 /*
- me/2
- me/2
- me/2
+ me/2     错了
+ me/2     错了
+ me/2     错了
  4.a:   yourName
  4.b:   yourName
  4:   yourName
