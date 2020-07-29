@@ -57,6 +57,13 @@ public class PatternEs {
     public static void method4(){
         String someWord = "abc";
         String somePattern = "";
+        if(someWord.indexOf("a") == 0) somePattern = "^a";
+        if(someWord.length() >=2) somePattern += ".*";
+        if(someWord.charAt(someWord.length()-1) == 'c') somePattern += "c$";
+
+        System.out.println("somePattern = "+ somePattern);
+        System.out.println(somePattern +" matches " + someWord +" : "+ Pattern.matches(somePattern,someWord));
+
 
     }
 
@@ -65,5 +72,6 @@ public class PatternEs {
         mathod1();
         method2();
         method3();
+        method4();
     }
 }

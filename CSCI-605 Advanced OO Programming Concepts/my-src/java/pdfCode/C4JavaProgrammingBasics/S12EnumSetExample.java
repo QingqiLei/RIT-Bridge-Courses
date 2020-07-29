@@ -8,9 +8,8 @@ import java.util.EnumSet;
  *  >>> 负数 高位补0
  */
 public class S12EnumSetExample {
-    enum Color{
-        RED, GREEN, BLUE
-    };
+
+
 
     public static void main(String[] args) {
         EnumSet<Color> redGreen = EnumSet.of(Color.RED, Color.GREEN);
@@ -29,3 +28,7 @@ public class S12EnumSetExample {
         System.out.println("int\t" + (~0 >>> 1) + "\t" + (~ (~0 >>> 1)));
     }
 }
+
+enum Color{
+    RED, GREEN, BLUE
+};
