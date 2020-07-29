@@ -22,5 +22,7 @@ object 没有构造方法
 
 ## 成员变量有默认值
 
+
 ## 变量可能没有初始化  @see Bier
+String t = null; // 算完成初始化
 

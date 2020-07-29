@@ -1,5 +1,10 @@
 package pdfCode.C7Inheritance;
 
+import pdfCode.C7Inheritance.S;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class SubclassOfS extends S {
 
   public int intS;
@@ -33,6 +38,9 @@ public class SubclassOfS extends S {
 			+ ((S)aSubclassOfS).intS);
 	  System.out.println("3. aS.iniS   =" + aS.intS);
 // 	method(3);		// <--- what is the problem here ...
+
+	  List<String> list1 = new ArrayList<>();
+	  System.out.println(list1);
 
   }
 }
