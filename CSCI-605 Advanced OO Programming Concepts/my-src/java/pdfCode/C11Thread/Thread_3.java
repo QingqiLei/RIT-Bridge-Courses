@@ -37,6 +37,7 @@ public class Thread_3 extends Thread	{
 		sleepForAbit(100);
 		System.err.println("interrupt 'first'");
 		aT1.interrupt();
+
 	}
 }
 /*
