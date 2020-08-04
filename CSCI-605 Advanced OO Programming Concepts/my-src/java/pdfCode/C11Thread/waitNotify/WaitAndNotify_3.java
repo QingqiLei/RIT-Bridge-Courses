@@ -24,6 +24,7 @@ public class WaitAndNotify_3 extends Thread	{
 			System.out.println(info + ": Exception");
 			e.printStackTrace();
 		}
+//		aVector.notifyAll();
 		System.out.println(info + " is awake! " + new Date());
 	  }
 
@@ -42,13 +43,18 @@ public class WaitAndNotify_3 extends Thread	{
 		else
 			synchronized ( aVector )	{
 				if (   info.equals("two")  )	{
-					System.out.println(info + " will wait ...");
-					aVector.notify();
+					System.out.println(info + " will done ...");
+					aVector.notifyAll(); // 如果使用notify()， 那么大概率程序会卡住
+					try {
+						Thread.sleep(4000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					System.out.println(info + " done.");
 				} else {
 					System.out.println(info + " will wait ...");
 					try {
-						new WaitAndNotify_First("two", aVector).start();
+						new WaitAndNotify_3("two", aVector).start();
 						aVector.wait();
 					} catch ( IllegalMonitorStateException  e )	{
 						System.out.println( ": IllegalMonitorStateException");
