@@ -55,6 +55,11 @@ public class WithoutStreams {
                 .forEach(s ->
                         System.out.format("forEach: %s [%s] \n", s, Thread.currentThread().getName())
                 );
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     private static List<String> getFilterOutput(List<String> lines) {
